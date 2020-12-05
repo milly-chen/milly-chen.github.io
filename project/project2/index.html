@@ -1,10 +1,75 @@
----
-title: "Modeling Medical Insurance Data"
-author: "Melissa Chen"
-date: "11/17/2020"
-output: html_document
----
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Melissa Chen" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <title>Modeling Medical Insurance Data</title>
+    <meta name="generator" content="Hugo 0.79.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
 
+    
+  </head>
+
+  <body>
+    <div id="wrap">
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"><i class="fa fa-home"></i></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/post/">BLOG</a></li>
+        
+        <li><a href="/projects/">PROJECTS</a></li>
+        
+        <li><a href="/resume/">RESUME</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="/project/project2/">Modeling Medical Insurance Data</a></strong>
+          </h3>
+        </div>
+ 
+<div class="blog-title">
+          <h4>
+         January 1, 0001 
+            &nbsp;&nbsp;
+            
+          </h4>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
 <link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
@@ -41,7 +106,7 @@ summary(man1)</code></pre>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>## multivariate normality
 ggplot(insurance, aes(x = charges, y = bmi)) + geom_point(alpha = .5) + geom_density_2d() + facet_wrap(~region) </code></pre>
-<p><img src="public/project/project2_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project2_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>## variance-covariance homogeneity
 covmats &lt;- insurance %&gt;% group_by(region) %&gt;% do(covs=cov(.[3:4]))
 for(i in 1:4){print(as.character(covmats$region[i])); print(covmats$covs[[i]])}</code></pre>
@@ -63,7 +128,7 @@ for(i in 1:4){print(as.character(covmats$region[i])); print(covmats$covs[[i]])}<
 ## charges 14664.55540 133568388.77</code></pre>
 <pre class="r"><code>## linear relationship btw DV
 ggplot(insurance, aes(charges, bmi)) + geom_point() + geom_smooth(method=lm) </code></pre>
-<p><img src="public/project/project2_files/figure-html/unnamed-chunk-2-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project2_files/figure-html/unnamed-chunk-2-2.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code># running univariate ANOVA
 summary.aov(man1)</code></pre>
 <pre><code>##  Response charges :
@@ -149,9 +214,9 @@ new&lt;-data.frame(charges=sample(insurance$charges),sex=insurance$sex) #scrambl
 rand_dist[i]&lt;-mean(new[new$sex==&quot;1&quot;,]$charges)-   
               mean(new[new$sex==&quot;0&quot;,]$charges)} 
 {hist(rand_dist,main=&quot;&quot;,ylab=&quot;&quot;); abline(v = c(-1387.17233389, 1387.17233389),col=&quot;red&quot;)}</code></pre>
-<p><img src="public/project/project2_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project2_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>mean(rand_dist&gt;1387.17233389 | rand_dist&lt; -1387.17233389)</code></pre>
-<pre><code>## [1] 0.0376</code></pre>
+<pre><code>## [1] 0.0372</code></pre>
 <p>For my randomization test I decided to test if there was a mean difference in charges on a patients medical bill based on sex. My null hypothesis is that there is no mean difference between the medical bill charges of a female and male. My alternative hypothesis is that there is a mean difference between the medical bill charges of a female and male. I found that female patients have a mean charge of 1387.17 lower than male patients charges.</p>
 <p>I then created a histogram showing the mean differences after randomization (null hypothesis plot) and also added on vertical lines to represent the mean difference (test statistic) between females and males. The resulting p value (p = 0.0352) after randomzation indicates that I can reject the null hypothesis to conclude that there is a significant mean difference between the medical charges of females and males.</p>
 </div>
@@ -187,15 +252,15 @@ summary(lm_fit)</code></pre>
 ## F-statistic: 20.36 on 3 and 1334 DF,  p-value: 6.672e-13</code></pre>
 <pre class="r"><code># plotting fit
 insurance %&gt;% ggplot(aes(bmi_c,charges,color=children))+geom_point()+geom_smooth(method=&quot;lm&quot;, se=F)</code></pre>
-<p><img src="public/project/project2_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project2_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code># assumptions
 ## linearity
 lm_resids &lt;- lm_fit$residuals; lm_fitvals&lt;- lm_fit$fitted.values
 ggplot()+geom_point(aes(lm_fitvals,lm_resids))+geom_hline(yintercept=0, col=&quot;red&quot;)</code></pre>
-<p><img src="public/project/project2_files/figure-html/unnamed-chunk-4-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project2_files/figure-html/unnamed-chunk-4-2.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>## normality
 ggplot()+geom_histogram(aes(lm_resids))</code></pre>
-<p><img src="public/project/project2_files/figure-html/unnamed-chunk-4-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project2_files/figure-html/unnamed-chunk-4-3.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>## homoskedasticity 
 bptest(lm_fit)</code></pre>
 <pre><code>## 
@@ -321,12 +386,12 @@ insurance$logit &lt;- predict(lr_fit,type=&quot;link&quot;)
 insurance %&gt;% ggplot() + geom_density (aes(logit,color=smoker,fill=smoker), alpha=.4)+
   theme(legend.position=c(.85,.85))+geom_vline(xintercept=0)+xlab(&quot;logit (log-odds)&quot;)+
   geom_rug(aes(logit,color=smoker))</code></pre>
-<p><img src="public/project/project2_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project2_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code># ROC
 library(plotROC)
 ROCplot&lt;-ggplot(insurance)+geom_roc(aes(d=smoker,m=prob), n.cuts=0) 
 ROCplot</code></pre>
-<p><img src="public/project/project2_files/figure-html/unnamed-chunk-6-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project2_files/figure-html/unnamed-chunk-6-2.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>calc_auc(ROCplot)</code></pre>
 <pre><code>##   PANEL group       AUC
 ## 1     1    -1 0.9823761</code></pre>
@@ -453,3 +518,59 @@ summarize_all(diags,mean)</code></pre>
 <p>After removing region as a predictor from the regression model, the resulting accuracy, sensitivity, specificity, precision, and AUC are 0.9588, 0.9414, 0.9634, 0.8697, and 0.9849 respectively. Comparing this out of sample regression with the in sample original regression with all variables, accuracy, sensitivity, and precision decreased while specificity, precision, and AUC stayed around the same. On the other hand, when comparing the lassoed out of sample model to the full out of sample model there is not much difference between the class diagnostics. The largest change was in the sensitivity where the lassoed out of sample regression had a higher sensitivity. Overall, all three models were good fits of the data and are able to predict quite accurately whether a patient is a smoker.</p>
 </div>
 </div>
+
+            
+        <hr>         <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+              </div> 
+            </div>
+          </div>
+
+   <hr>  <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div> 
+        </div>
+      </div>
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/js/docs.min.js"></script>
+<script src="/js/main.js"></script>
+
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    
+  </body>
+</html>

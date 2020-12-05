@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Project 3</title>
-    <link>/</link>
-    <description>Recent content on Project 3</description>
+    <title>Projects on Project 3</title>
+    <link>/project/</link>
+    <description>Recent content in Projects on Project 3</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-US</language><atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Analysis of Happiness Score and Alcohol Consumption per Country</title>
       <link>/project/project1/</link>

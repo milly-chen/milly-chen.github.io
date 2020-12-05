@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/project1/</loc>
+    <loc>/project/project1/</loc>
   </url>
   
   <url>
@@ -11,11 +11,15 @@
   </url>
   
   <url>
-    <loc>/project2/</loc>
+    <loc>/project/project2/</loc>
   </url>
   
   <url>
     <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
   </url>
   
   <url>

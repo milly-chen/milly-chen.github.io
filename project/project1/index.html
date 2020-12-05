@@ -1,12 +1,75 @@
----
-title: "Analysis of Happiness Score and Alcohol Consumption per Country"
-author: "Melissa Chen"
-date: "9/23/2020"
-output:
-  pdf_document: default
-  html_document: default
----
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Melissa Chen" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <title>Analysis of Happiness Score and Alcohol Consumption per Country</title>
+    <meta name="generator" content="Hugo 0.79.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
 
+    
+  </head>
+
+  <body>
+    <div id="wrap">
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"><i class="fa fa-home"></i></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/post/">BLOG</a></li>
+        
+        <li><a href="/projects/">PROJECTS</a></li>
+        
+        <li><a href="/resume/">RESUME</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="/project/project1/">Analysis of Happiness Score and Alcohol Consumption per Country</a></strong>
+          </h3>
+        </div>
+ 
+<div class="blog-title">
+          <h4>
+         January 1, 0001 
+            &nbsp;&nbsp;
+            
+          </h4>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
 <link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
@@ -125,7 +188,7 @@ x %&gt;% filter(correlation != 1) %&gt;% slice(which.max(correlation))</code></p
 num_full &lt;- subset(full, select = -c(country, continent, total_servings))
 num_full %&gt;% cor() %&gt;% as.data.frame() %&gt;% rownames_to_column(&quot;var1&quot;) %&gt;% pivot_longer(-1, names_to = &quot;var2&quot;, values_to = &quot;correlation&quot;) %&gt;% ggplot(aes(var1, var2, fill = correlation)) +
   geom_tile() + geom_text(aes(label=round(correlation,2)), color = &quot;white&quot;) + scale_x_discrete(guide = guide_axis(angle = 45))</code></pre>
-<p><img src="public/project/project1_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project1_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Above is the correlation heatmap for all of my numeric variables except for total number of servings of alcohol. This gives you a quick overview of variables that seem to be correlated to each other. For example, from the heatmap it can be seen that countries with high social support also tend to have a high score.</p>
 <pre class="r"><code># Plot of total servings of alcohol versus score and colored by continent. This plot has its theme and color changed and the number of ticks on the x axis increased from 5 to 7
 ggplot(full, aes(total_servings, Score, color = continent)) + geom_point() +
@@ -134,7 +197,7 @@ ggplot(full, aes(total_servings, Score, color = continent)) + geom_point() +
   xlab(&quot;Total Servings of Alcohol&quot;) + ylab(&quot;Score on Happiness Index&quot;) + 
   theme_dark() +
   scale_x_continuous(&quot;Total Servings of Alcohol&quot;, breaks = c(0, 100, 200, 300, 400, 500, 600), labels=c(0, 100, 200, 300, 400, 500, 600))</code></pre>
-<p><img src="public/project/project1_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project1_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>In this scatterplot graphing total servings of alcohol of each country against its score, There seems to me a slight positive correlation between the two variables depending on continent. For example, when looking at Europe, higher total servings of alcohol usually resulted in a high score on the happiness index. Most African countries both had lower total servings of alcohol and scored lower on the happiness index. Looking at the entire spread of datapoints, there appears to be a relatively positive correlation.</p>
 <pre class="r"><code># Second plot with summary statistic of mean of beer servings and mean generosity goruped by country
 full %&gt;% select(continent, beer_servings, Generosity) %&gt;% group_by(continent) %&gt;% summarise_all(mean) -&gt; plot2
@@ -142,7 +205,7 @@ full %&gt;% ggplot(aes(x = beer_servings, y = Generosity, fill = continent)) +
   geom_boxplot() + 
   geom_point(data = plot2, stat = &quot;summary&quot;, fun = mean, aes(x = beer_servings, y = Generosity, color = continent)) + 
   scale_color_brewer(palette = &quot;Set3&quot;) + ggtitle(&quot;Mean Beer Servings vs Mean Generosity by Continent Boxplot&quot;) + xlab(&quot;Beer Servings&quot;) + ylab(&quot;Generosity&quot;)</code></pre>
-<p><img src="public/project/project1_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project1_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>I decided that for my second plot I would want to use a boxplot to see the distribution of beer servings and generosity score by continent. This would give the min, median, and max of generosity by continent while also varying by beer servings. Then I also added a scatterplot on top of the boxplot that plotted the mean of beer servings and mean generosity per country. Looking at the overlap of the scatterplot and boxplot, it can be seen that most of the observations on the scatterplot doesn’t overlap with the boxplots. This can be explained by the fact that the boxplots per continent has a lot of variation. There is also the issue that there aren’t many observations for Oceania so the boxplot for it is very small in comparison to other countries, which would decrease its statistical power. In North America and Asia there are a few outliers which affect the mean of the generosity score and the mean of the number of beer servings.</p>
 </div>
 <div id="dimensionality-reduction" class="section level3">
@@ -192,11 +255,11 @@ names(pca_full)</code></pre>
 results &lt;- full %&gt;% as.data.frame %&gt;% 
   mutate(PC1 = pca_full$scores[, 1], PC2 = pca_full$scores[, 2], PC3 = pca_full$scores[, 3], PC4 = pca_full$scores[, 4], PC5 = pca_full$scores[, 5], PC6 = pca_full$scores[, 6])
 results %&gt;% ggplot(aes(PC1, PC2, color = continent)) + geom_point()</code></pre>
-<p><img src="public/project/project1_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project1_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>results %&gt;% ggplot(aes(PC3, PC4, color = continent)) + geom_point()</code></pre>
-<p><img src="public/project/project1_files/figure-html/unnamed-chunk-7-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project1_files/figure-html/unnamed-chunk-7-2.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>results %&gt;% ggplot(aes(PC5, PC6, color = continent)) + geom_point()</code></pre>
-<p><img src="public/project/project1_files/figure-html/unnamed-chunk-7-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/project/project1_files/figure-html/unnamed-chunk-7-3.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>pca_full$scores[,1:4] %&gt;% as.data.frame %&gt;% top_n(3, Comp.3)</code></pre>
 <pre><code>##            Comp.1     Comp.2   Comp.3     Comp.4
 ## Burundi -3.699728  0.3918887 2.210194 -0.4678550
@@ -205,3 +268,59 @@ results %&gt;% ggplot(aes(PC1, PC2, color = continent)) + geom_point()</code></p
 <p>Using PCA, I was able to reduce the number of closely related variables and form a more concise understanding of my dataset. In this case after selecting only the numeric variables of my fully joined dataset, which created num_ful, I normalized the results to standardize the range of observations. Then I am able to run a PCA on my numeric dataset and see which component describes the variation in my data the best. After looking at the cumulative proportion, I decided that PC 6 was going to describe the variance in my data the best. PC 6 explained 90.99% of the variance in my dataset and that variance was mainly affected by the different number of servings of the three different alcohol types and two socialeconomic statistics, generosity and the perceptions of corruption choices. Out of these 5 variables, spirit servings, generosity, and perceptions of corruption, which had eigen values of -0.418, 0.411, and -0.695 respectively, affected my dataset the most. If PC 6 was a high value, that means that people would’ve drank a less servings of spirit, however, they would also be more generous and perceive less corruption in their country. On the other hand if PC 6 was a low value that would indicate that people drank more servings of the other two alcohols, beer and wine. They would also be less generous and perceive their country to be more corrupt.</p>
 <p>Looking at the three different sctterplots graphing the interaction between the different principle components, we can get a better idea of how the data varies. When graphing PC 1 aginst PC 2, it can be seen that most of the points have a larger variation on PC 1 based on continent and therefore some small clusters can be seen. Specifically, Europe and Africa are spread out very differently acorss PC 1 while some of the other continents are jumbled in the middle. When looking at the countries who score highest on PC 1, all of them are European countries who are known for scoring high on the happiness index. Now looking at PC 3 graphed against PC 4, it can be seen that countries who ranked high have a consumed more liters of alcohol, especially wine, and have higher perceptions of corruption. In this case PC 3 is not as good as PC 1 in creating clusters of observations, however, there is some clustering to be seen. Specifically, it can be seen now that North America and Asia have scored lower on PC 3 while Africa and Europe are more spread out. Finally looking at PC 5 versus PC 6, there is virtually no clustering that can be found since the different continents are plotted very closely to each other. If some grouping is to be seen, it would be that Europe scored slightly lower on PC 5 and South America and Africa scored slightly higher. This would indicate that people in Africa and South America drank less servings of spirit than other alcohols and that they perceive their country to be less corrupt while also being more generous.</p>
 </div>
+
+            
+        <hr>         <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+              </div> 
+            </div>
+          </div>
+
+   <hr>  <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div> 
+        </div>
+      </div>
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/js/docs.min.js"></script>
+<script src="/js/main.js"></script>
+
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    
+  </body>
+</html>
