@@ -216,7 +216,7 @@ rand_dist[i]&lt;-mean(new[new$sex==&quot;1&quot;,]$charges)-
 {hist(rand_dist,main=&quot;&quot;,ylab=&quot;&quot;); abline(v = c(-1387.17233389, 1387.17233389),col=&quot;red&quot;)}</code></pre>
 <p><img src="/project/project2_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>mean(rand_dist&gt;1387.17233389 | rand_dist&lt; -1387.17233389)</code></pre>
-<pre><code>## [1] 0.0372</code></pre>
+<pre><code>## [1] 0.0356</code></pre>
 <p>For my randomization test I decided to test if there was a mean difference in charges on a patients medical bill based on sex. My null hypothesis is that there is no mean difference between the medical bill charges of a female and male. My alternative hypothesis is that there is a mean difference between the medical bill charges of a female and male. I found that female patients have a mean charge of 1387.17 lower than male patients charges.</p>
 <p>I then created a histogram showing the mean differences after randomization (null hypothesis plot) and also added on vertical lines to represent the mean difference (test statistic) between females and males. The resulting p value (p = 0.0352) after randomzation indicates that I can reject the null hypothesis to conclude that there is a significant mean difference between the medical charges of females and males.</p>
 </div>
