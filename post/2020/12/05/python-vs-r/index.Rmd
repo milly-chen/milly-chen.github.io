@@ -57,4 +57,5 @@ cat(c(name, py$name))
 The "name" references the name object in r, but the py$name indicates the name value in python. As seen, both python and r can communicate and share information across code chunks!
 
 After all that coding and stress (because I'm scared my website will just suddenly crash), go check out Mao Buyi's album on Spotify! I played this album in the background during this project and it helped me stay calm and focused.
+
 ![](https://t2.genius.com/unsafe/771x0/https%3A%2F%2Fimages.genius.com%2F805ebc3f5dfcf125d04ade0fb6dd8051.1000x1000x1.jpg)
