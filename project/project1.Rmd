@@ -1,7 +1,7 @@
 ---
 title: "Analysis of Happiness Score and Alcohol Consumption per Country"
 author: "Melissa Chen"
-date: "9/23/2020"
+date: '2020-12-05'
 output:
   html_document: default
   pdf_document: default
