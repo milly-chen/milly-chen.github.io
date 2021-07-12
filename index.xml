@@ -6,7 +6,16 @@
     <description>Recent content on Project 3</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 05 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proposed Gli Enhancer Target Gene *Smoc1* Involved In Limb Development By Hedgehog Signal Using GREAT.</title>
+      <link>/project/project3/</link>
+      <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/project/project3/</guid>
+      <description>SummaryThis paper identifies potential target genes regulated by Hedgehog (HH) signaling during limb development. It is known that Gli3 binding can repress or activate Sonic Hedgehog (Shh) target genes. Active Gli enhancers were identified using H3K27ac enrichment and was obtained through ChIP-seq. This reveals regions of DNA where there was increased Gli3 binding and H3K27ac modification (Lex et al., 2020). An intersection was made of the two enrichment files and processed by GREAT to find genes regulated by HH signaling.</description>
+    </item>
+    
     <item>
       <title>Analysis of Happiness Score and Alcohol Consumption per Country</title>
       <link>/project/project1/</link>
@@ -44,6 +53,8 @@ First ensure the “reticulate” package has been installed and now let’s try
       <description>Check out some of my coding projects below:
  Wrangling &amp;amp; Exploratory Data Analysis
  Modeling, Inference, Prediction
+Check out some of my research projects below:
+ UCSC Genome Browser: Identifying Potential Genes Regulated by Sonic Hedgehog Signaling Involved in Limb Development
   --</description>
     </item>
     

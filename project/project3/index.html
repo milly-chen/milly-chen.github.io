@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Melissa Chen" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <title>Proposed Gli Enhancer Target Gene *Smoc1* Involved In Limb Development By Hedgehog Signal Using GREAT.</title>
+    <meta name="generator" content="Hugo 0.79.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+  </head>
+
+  <body>
+    <div id="wrap">
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"><i class="fa fa-home"></i></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/post/">BLOG</a></li>
+        
+        <li><a href="/projects/">PROJECTS</a></li>
+        
+        <li><a href="/resume/">RESUME</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="/project/project3/">Proposed Gli Enhancer Target Gene *Smoc1* Involved In Limb Development By Hedgehog Signal Using GREAT.</a></strong>
+          </h3>
+        </div>
+ 
+<div class="blog-title">
+          <h4>
+         March 12, 2021 
+            &nbsp;&nbsp;
+            
+          </h4>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<P style="page-break-before: always">
+<div style="page-break-after: always;"></div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>This paper identifies potential target genes regulated by Hedgehog (HH) signaling during limb development. It is known that Gli3 binding can repress or activate Sonic Hedgehog (Shh) target genes. Active Gli enhancers were identified using H3K27ac enrichment and was obtained through ChIP-seq. This reveals regions of DNA where there was increased Gli3 binding and H3K27ac modification (Lex et al., 2020). An intersection was made of the two enrichment files and processed by GREAT to find genes regulated by HH signaling. Out of the 336 potential HH target genes, I selected <em>Smoc1</em>, which had an active Gli enhancer region upstream of it by 16k base pairs. This gene has been documented to cause Waardenburg anophthalmia syndrome in which patients lack or have deformed eyes along with limb abnormalities (Rainger et al., 2009; Okada et al., 2011). Prior research has mentioned <em>Smoc1</em> being a bone morphogenic protein (BMP) antagonist in <em>Xenopus laevis</em>, which will bind to BMP proteins to regulate limb development in conjunction with HH signaling (Thomas et al., 2009; Hu et al., 2015). While no research has shown that <em>Smoc1</em> is a target gene of HH signaling, I hypothesize that <em>Smoc1</em> is involved in limb development and is a target gene of HH signaling. Additionally, assuming that <em>Smoc1</em> is a target gene of HH signaling, I hypothesize that it is a positive regulator of Shh.</p>
+</div>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Sonic hedgehog (Shh) is an essential pathway in mammals that controls embryonic limb development through interaction with GLI transcription factors (Falkenstein and Vokes, 2014). GLI transcription factors can act as activators or repressors depending on if Shh ligand is present (Lex et al., 2020). In the presence of the Shh ligand, the full length GLI transcription factors will be processed into GLI activators. The active GLI transcription factors will bind to enhancer regions of the DNA to increase the expression of target Shh genes (Winklmayr et al., 2010). Enhancers are cis regulatory elements that regulate cell specific gene expression. In addition to GLI transcription factors, its activity is also regulated by epigenetic markers such as acetylation and methylation in HH signaling. (Ong &amp; Corces, 2011). Acetylation modifications such as H3K27ac indicate active enhancers while methylation indicates repressed enhancer activity.</p>
+<p>This experiment identified potential target genes of HH signaling through Gli3 and H3K27ac enrichment, which was obtained through ChIP-seq. The Gli3 enrichment data is used to see potential enhancers that are regulated by HH signaling. H3K27ac enrichment is needed to confirm which Gli3 bound enhancers are active and increase expression of HH signaling target genes (Lex et al., 2020). An intersection of Gli3 and H3K27ac enrichment is created to identify Gli activator binding and is processed in GREAT to identify potential target genes of HH signaling. In the list of 336 potential target genes, I chose <em>Smoc1</em>. A recessive homozygous mutation of <em>Smoc1</em> will cause microphthalmia with limb abnormalities (Okada et al., 2011; Rainger et al., 2018). <em>Smoc1</em> has been identified as a BMP antagonist and will inhibit BMP in <em>Xenopus laevis</em> (Thomas et al., 2009). Many BMP genes are a target of Shh, and it has been observed that BMP expression will repress Shh in a negative feedback loop (Hu et al., 2015; Bastida et al., 2009). However, there has not been research to prove that <em>Smoc1</em> is a target gene of HH signaling. I hypothesize that <em>Smoc1</em> is in fact a target gene of HH signaling and assuming that is true, <em>Smoc1</em> is a positive regulator of HH signaling.</p>
+</div>
+<div id="description-of-findings" class="section level2">
+<h2>Description of findings</h2>
+<p>There are two steps in identifying potential HH signaling target genes: identifying active Gli binding enhancers and target genes closest to the active enhancers through GREAT. To identify potential HH signaling enhancers, Gli3 and H3K27ac enrichment data was uploaded into Genome Browser. Gli3 bound regions indicate enhancer regions that are involved in the regulation of Shh target genes. However, since Gli3 can be in an active or repressive state, the H3K27ac enrichment is needed to confirm which Gli3 bound regions (GBR) are active enhancers (Lex et al. ,2020). Once uploaded, the Gli3 enrichment data identified 728 GBRs and the H3K27ac enrichment data identified 2113 regions of H3K27ac binding (Figure 1, Figure 2B). An intersection of the uploaded enrichment data was made in the Table Browser tool and resulted in 238 active enhancer regions, also known as HH-responsive GBRs (Figure 2).</p>
+<div class="figure">
+<img src="/project/project3_files/Picture1.png" alt="" />
+<p class="caption">Figure 1 In this session, the Gli3 (green) enrichment data was uploaded along with the H3K27ac (red) enrichment data. <a href="https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&amp;lastVirtModeType=default&amp;lastVirtModeExtraState=&amp;virtModeType=default&amp;virtMode=0&amp;nonVirtPosition=&amp;position=chr13%3A63278696%2D63795367&amp;hgsid=1029824069_OM4DA5LGmOLuAsr1AgbYTppavfKT" class="uri">https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&amp;lastVirtModeType=default&amp;lastVirtModeExtraState=&amp;virtModeType=default&amp;virtMode=0&amp;nonVirtPosition=&amp;position=chr13%3A63278696%2D63795367&amp;hgsid=1029824069_OM4DA5LGmOLuAsr1AgbYTppavfKT</a></p>
+</div>
+<p><img src="/project/project3_files/Picture2.jpg" />
+<img src="/project/project3_files/Picture3.jpg" alt="Figure 2 A) This is a screenshot of the browser after creating the intersection track between Gli3 and H3K27ac. The intersection track is in black and identifies active HH-responsive GBRs, which regulate HH target genes. https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&amp;lastVirtModeType=default&amp;lastVirtModeExtraState=&amp;virtModeType=default&amp;virtMode=0&amp;nonVirtPosition=&amp;position=chr1%3A38753875%2D38762374&amp;hgsid=1029824961_rHea69ATnBEsaBZUndaWmYznyw5n. B) This is a screenshot of the total tracks added in my session and there are 238, 2113, and 7282 identified enhancer regions for the intersection, H3K27ac, and Gli3 track, respectively." /></p>
+<p>The intersection of Gli3 and H3K27ac was uploaded into GREAT to identify the closest target genes to the active enhancer regions. There are 336 potential target genes of HH signaling identified and its distance to the active enhancer regulating it are in parentheses (Table 1). In the parentheses, negative numbers indicate the active enhancer is upstream of the gene, while positive numbers indicate the enhancer is downstream of the gene. At the top of the page there are graphs showing additional information about the HH-responsive GBRs and target genes. Most of the target genes have 2 active enhancers regulating it and most of the active enhancers are 50 to 500 kb away from the target genes (Figure 3A, B). GREAT categorizes all these genes into various biological processes such as limb development. Amongst the 22 listed potential HH signaling target genes playing a part limb development, I chose <em>Smoc1</em>.</p>
+<div class="figure">
+<img src="/project/project3_files/Picture4.png" alt="" />
+<p class="caption">Figure 3 A) This graph shows the average number of genes associated with each HH-responsive GBR identified by the intersection. Almost 80% of the genes have on average 2 HH-responsive GBR regulating it. B) This graph shows the average distance of the HH-responsive GBRs from the HH target genes. 60% of the target genes are 50kb to 500kb away from the active enhancer.</p>
+</div>
+<p><em>Smoc1</em> has only one HH-responsive GBR upstream of it by 16733 base pairs (Table 1, Figure 4). This gene is located on chr12: 81,026,828 - 81,186,410 while the HH-responsive GBR is located on chr12: 81,009,801 - 81,010,349. Previous research confirms that <em>Smoc1</em> plays a role in eye and limb development by causing Waardenburg anophthalmia syndrome (WAS), also known as microphthalmia with limb anomalies (Okada et al., 2011). WAS results from a homozygous autosomal recessive mutation in Smoc1 and changes limb development through syndactyly, polydactyly, synostosis, and oligodactyly (Abouzeid et al., 2011; Rainger et al., 2018). Smoc1 is a BMP antagonist and blocks BMP from binding onto receptors in the model organism <em>Xenopus laevis</em> (Thomas et al., 2009). BMP is produced by the HH signaling pathway, so preventing BMP binding can change the expression of necessary genes. Due to the changes in digit number and digit formation, I hypothesize that <em>Smoc1</em> is a target gene of HH signaling and assuming that is true, I hypothesize <em>Smoc1</em> plays a role as a positive regulator of HH signaling.</p>
+<div class="figure">
+<img src="/project/project3_files/Picture5.png" alt="" />
+<p class="caption">Figure 4 This screenshot shows the location of the Smoc1 HH-responsive GBR in comparison to the location of Smoc1. The active enhancer region is 16733 base pairs upstream from the start of Smoc1. <a href="http://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&amp;lastVirtModeType=default&amp;lastVirtModeExtraState=&amp;virtModeType=default&amp;virtMode=0&amp;nonVirtPosition=&amp;position=chr12%3A80735575%2D81284574&amp;hgsid=1053561025_A5lmtrC1GlHE03k2MuhDT6lWwj23" class="uri">http://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&amp;lastVirtModeType=default&amp;lastVirtModeExtraState=&amp;virtModeType=default&amp;virtMode=0&amp;nonVirtPosition=&amp;position=chr12%3A80735575%2D81284574&amp;hgsid=1053561025_A5lmtrC1GlHE03k2MuhDT6lWwj23</a></p>
+</div>
+</div>
+<div id="discussion-and-conclusion" class="section level2">
+<h2>Discussion and Conclusion</h2>
+<p>The purpose of this study is to identify potential HH target genes that regulate limb development though identifying active HH-responsive GBRs. Both the Gli3 and H3K27ac enrichment files were uploaded into genome browser and an intersection was created to identify active Gli3 binding enhancers. The intersection identified 238 HH-responsive GBRs and GREAT analyzed the intersection data to find 336 target genes. GREAT identified the 336 target genes by associating the closest genes to the HH-responsive GBRs (Mclean et al., 2010). Out of 336 target genes, only 22 genes are identified to affect limb development. However, there are some limitations to using GREAT. First the number of identified genes can be overestimated or underestimated depending on how the intersection of Gli3 and H3K27ac was made. An intersection with any overlap will yield different target genes than an intersection with at least 80% overlap. Additionally, GREAT assumes that genes closest to the HH-responsive GBR will be regulated by it; however, some active enhancers regulate genes further from it.</p>
+<p>In the case of <em>Smoc1</em>, there is only one HH-responsive GBR identified that regulates it. The active enhancer is upstream of <em>Smoc1</em> by 16733 base pairs, which is closer than the average enhancer to its target gene (Figure 3B). Since there is only one close HH-responsive GBR, it may mean that while <em>Smoc1</em> is regulated by HH signaling, it may not play a large role in limb development compared to other genes, such as <em>Hox13</em>, which have multiple HH responsive enhancer regions. There are additional regions of Gli3 binding that do not transcriptionally regulate genes. These inert Gli3 binding enhancers are thought to be stable GBRs that are not highly enriched near HH target genes and were hypothesized to globally regulate genes (Lex et al., 2020). Regions of H3K27ac modification indicate other enhancers not regulated by HH signaling are active. These enhancers may regulate genes involved in other cellular processes in specific cells such as neuronal and kidney cells.</p>
+<p>A homozygous recessive mutation in <em>Smoc1</em> cause Waardenburg anophthalmia syndrome (WAS) (Abouzeid et al., 2010; Slavotinek 2019). Patients with WAS have deformed eyes and abnormal limb development;therefore, <em>Smoc1</em> is seen to affect limb development. Using whole mount in situ hybridization, Smoc1 protein is seen to be localized in the optical vesicle and forelimbs and hindlimbs of wild type mice (Rainger et al., 2018). Mice progeny born with <em>Smoc1</em> mutations have abnormal digits and died sooner than their wild-type counterpart. The presence of syndactyly and oligodactyly suggests that the mechanisms controlling digit formation, such as Shh and bone morphogenesis proteins (BMP), are impaired. While there is no prior research proving <em>Smoc1</em> is a target gene of HH signaling, I hypothesize that it is a target gene. To test this, in-situ hybridization can be performed on wild type mice embryo and mice embryos lacking Gli3 to measure the expression of <em>Smoc1</em>. If my hypothesis is true, there will be Smoc1 protein expression localized at limb buds in wild type mice. But in mice lacking Gli3, I would not expect Smoc1 expression because it is not transcriptionally activated by Gli3.</p>
+<p>Assuming that <em>Smoc1</em> is a target gene of HH signaling, I additionally hypothesize that it will regulate HH signaling in a positive feedback loop. Research has shown that <em>Smoc1</em> is a BMP antagonist in <em>Xenopus laevis</em>, which concludes that the human ortholog <em>Smoc1</em> is also an antagonist (Thomas et al., 2009). BMP genes are target genes in HH signaling and there is experimental evidence to indicate that BMP negatively regulates or inhibits HH signaling (Bastida et al., 2009). Using these two pieces of information, I hypothesize that <em>Smoc1</em> will inhibit BMP, since it is a BMP antagonist, and in turn BMP will not be able to inhibit HH signaling (Figure 5). This will indicate that <em>Smoc1</em> is a positive regulator of HH signaling.</p>
+<div class="figure">
+<img src="/project/project3_files/Picture6.png" alt="" />
+<p class="caption">Figure 5 This is a figure showing how BMP is a target gene of HH signaling and how BMP can also act as a negative regulator of HH signaling. I hypothesize that Smoc1 will act as a positive regulator on HH signaling because it will inhibit BMP from inhibiting HH signaling.</p>
+</div>
+<p>To test my second hypothesis, I can use RNA-seq to see if the levels of Smoc1 expression change in a wild type cell line containing Gli3 and in a mutant cell line lacking Gli3. First I would dissect the limb buds from both cell lines and then perform RNA-seq to see Smoc1 expression levels. If my hypothesis was right in that <em>Smoc1</em> is indeed a positive regulator of HH signaling, then the wild type cell line will show increased Smoc1 expression and the mutant cell line will have decreased Smoc1 expression levels.</p>
+</div>
+<div id="references" class="section level2">
+<h2>References</h2>
+<p>Abouzeid, H., Boisset, G., Favez, T., Youssef, M., Marzouk, I., Shakankiry, N., Bayoumi, N., Descombes, P., Agosti, C., Munier, F. L., &amp; Schorderet, D. F. (2011). Mutations in the sparc-related modular calcium-binding protein 1 gene, smoc1, cause waardenburg anophthalmia syndrome. The American Journal of Human Genetics, 88(1), 92–98. <a href="https://doi.org/10.1016/j.ajhg.2010.12.002" class="uri">https://doi.org/10.1016/j.ajhg.2010.12.002</a></p>
+<p>Bastida, M. F., Sheth, R., &amp; Ros, M. A. (2009). A BMP-Shh negative-feedback loop restricts Shh expression during limb development. Development, 136(22), 3779–3789. <a href="https://doi.org/10.1242/dev.036418" class="uri">https://doi.org/10.1242/dev.036418</a></p>
+<p>Falkenstein, K. N., &amp; Vokes, S. A. (2014). Transcriptional regulation of graded Hedgehog signaling. Seminars in Cell &amp; Developmental Biology, 33, 73–80. <a href="https://doi.org/10.1016/j.semcdb.2014.05.010" class="uri">https://doi.org/10.1016/j.semcdb.2014.05.010</a></p>
+<p>Hu, D., Young, N. M., Li, X., Xu, Y., Hallgrimsson, B., &amp; Marcucio, R. S. (2015). A dynamic Shh expression pattern, regulated by SHH and BMP signaling, coordinates fusion of primordia in the amniote face. Development, 142(3), 567–574. <a href="https://doi.org/10.1242/dev.114835" class="uri">https://doi.org/10.1242/dev.114835</a></p>
+<p>Lex, R. K., Ji, Z., Falkenstein, K. N., Zhou, W., Henry, J. L., Ji, H., &amp; Vokes, S. A. (2020). GLI transcriptional repression regulates tissue-specific enhancer activity in response to Hedgehog signaling. ELife, 9, e50670. <a href="https://doi.org/10.7554/eLife.50670" class="uri">https://doi.org/10.7554/eLife.50670</a></p>
+<p>McLean, C. Y., Bristor, D., Hiller, M., Clarke, S. L., Schaar, B. T., Lowe, C. B., Wenger, A. M., &amp; Bejerano, G. (2010). GREAT improves functional interpretation of cis-regulatory regions. Nature Biotechnology, 28(5), 495–501. <a href="https://doi.org/10.1038/nbt.1630" class="uri">https://doi.org/10.1038/nbt.1630</a></p>
+<p>Okada, I., Hamanoue, H., Terada, K., Tohma, T., Megarbane, A., Chouery, E., Abou-Ghoch, J., Jalkh, N., Cogulu, O., Ozkinay, F., Horie, K., Takeda, J., Furuichi, T., Ikegawa, S., Nishiyama, K., Miyatake, S., Nishimura, A., Mizuguchi, T., Niikawa, N., Hirahara, F., … Saitsu, H. (2011). SMOC1 is essential for ocular and limb development in humans and mice. American journal of human genetics, 88(1), 30–41. <a href="https://doi.org/10.1016/j.ajhg.2010.11.012" class="uri">https://doi.org/10.1016/j.ajhg.2010.11.012</a></p>
+<p>Ong, C.-T., &amp; Corces, V. G. (2011). Enhancer function: New insights into the regulation of tissue-specific gene expression. Nature Reviews Genetics, 12(4), 283–293. <a href="https://doi.org/10.1038/nrg2957" class="uri">https://doi.org/10.1038/nrg2957</a></p>
+<p>Rainger, J., van Beusekom, E., Ramsay, J. K., McKie, L., Al-Gazali, L., Pallotta, R., Saponari, A., Branney, P., Fisher, M., Morrison, H., Bicknell, L., Gautier, P., Perry, P., Sokhi, K., Sexton, D., Bardakjian, T. M., Schneider, A. S., Elcioglu, N., Ozkinay, F., … FitzPatrick, D. R. (2018). Correction: Loss of the bmp antagonist, smoc-1, causes ophthalmo-acromelic (Waardenburg anophthalmia) syndrome in humans and mice. PLOS Genetics, 14(12), e1007866. <a href="https://doi.org/10.1371/journal.pgen.1007866" class="uri">https://doi.org/10.1371/journal.pgen.1007866</a></p>
+<p>Slavotinek, A. (2019). Genetics of anophthalmia and microphthalmia. Part 2: Syndromes associated with anophthalmia–microphthalmia. Human Genetics, 138(8–9), 831–846. <a href="https://doi.org/10.1007/s00439-018-1949-1" class="uri">https://doi.org/10.1007/s00439-018-1949-1</a></p>
+<p>Thomas, J. T., Canelos, P., Luyten, F. P., &amp; Moos, M. (2009). Xenopus smoc-1 inhibits bone morphogenetic protein signaling downstream of receptor binding and is essential for postgastrulation development in xenopus. The Journal of Biological Chemistry, 284(28), 18994–19005. <a href="https://doi.org/10.1074/jbc.M807759200" class="uri">https://doi.org/10.1074/jbc.M807759200</a></p>
+<p>Winklmayr, M., Schmid, C., Laner-Plamberger, S., Kaser, A., Aberger, F., Eichberger, T., &amp; Frischauf, A.-M. (2010). Non-consensus GLI binding sites in Hedgehog target gene regulation. BMC Molecular Biology, 11(1), 2. <a href="https://doi.org/10.1186/1471-2199-11-2" class="uri">https://doi.org/10.1186/1471-2199-11-2</a></p>
+</div>
+<div id="supplemental-data" class="section level2">
+<h2>Supplemental Data</h2>
+<p>[Table 1: Potential Nearby Gli3 Target Genes and their chromosomal coordinates. This is a table of all the associated genes closest to the identified HH-responsive GBRs from the intersection. The -/+ indicates HH-responsive GRB regions upstream and downstream of the genes, respectively. ]</p>
+<pre class="r"><code>library(readr)
+genomic &lt;- read_csv(&quot;C:/Users/shuen/OneDrive/genomic.csv&quot;)
+data.frame(genomic)</code></pre>
+<pre><code>##             Gene                             Region..Distance.to.TSS.
+## 1  1600014C23Rik                  unnamed (-202906), unnamed (-23106)
+## 2  1700018B08Rik                                    unnamed (+240704)
+## 3  1700129C05Rik                                    unnamed (+154993)
+## 4  2810428I15Rik                                     unnamed (+12002)
+## 5  4930546C10Rik                                    unnamed (+322716)
+## 6  5730508B09Rik                                    unnamed (-285176)
+## 7  6030458C11Rik                 unnamed (+143582), unnamed (+193207)
+## 8  A330070K13Rik                                    unnamed (-554144)
+## 9        A3galt2                                     unnamed (+45517)
+## 10      AI606181                                     unnamed (+20087)
+## 11        Actbl2                                     unnamed (-84513)
+## 12        Adgrb1                                    unnamed (-359720)
+## 13          Aff3                                    unnamed (-130940)
+## 14         Agap1                                    unnamed (+394119)
+## 15         Agtr2                                     unnamed (-50819)
+## 16         Alg13                                       unnamed (+571)
+## 17       Angptl8                                     unnamed (+11590)
+## 18       Ankrd16                                    unnamed (+404159)
+## 19       Ankrd44                                      unnamed (-4913)
+## 20          Aqp4                                    unnamed (+247359)
+## 21      Arhgap15                                    unnamed (+592555)
+## 22      Arhgap24                                    unnamed (+159059)
+## 23       Arhgap9                                     unnamed (+17068)
+## 24          Arsb                                    unnamed (+194845)
+## 25         Asb13                                     unnamed (+78768)
+## 26          Ass1                                    unnamed (-130157)
+## 27         Astn1                                    unnamed (+498177)
+## 28        Atp2b4                                     unnamed (+58691)
+## 29        Atp5g3 unnamed (-67100), unnamed (-66475), unnamed (-41475)
+## 30       Atp6ap2                                    unnamed (-368126)
+## 31      Atp6v0d1                   unnamed (+44847), unnamed (+45822)
+## 32         Auts2                                    unnamed (-591001)
+## 33      BC034090                                     unnamed (+20015)
+## 34         Bcat1                                    unnamed (+260762)
+## 35          Bcor                                    unnamed (-139122)
+## 36          Bdnf                                      unnamed (+2900)
+## 37       Bhlhe40                                    unnamed (-204254)
+## 38          Bmp7                                    unnamed (+265021)
+## 39      Calcoco1                   unnamed (-30222), unnamed (-24772)
+## 40        Calml3                                     unnamed (+91516)
+## 41        Calml4                                       unnamed (+171)
+## 42         Casp8                                     unnamed (+31023)
+## 43       Cbfa2t3                                     unnamed (+50434)
+## 44         Cbln4                                    unnamed (+308566)
+## 45       Ccdc182                 unnamed (+396067), unnamed (+400092)
+## 46         Ccnd1                      unnamed (-1781), unnamed (-381)
+## 47          Cct7                                     unnamed (+40361)
+## 48          Cd83                                    unnamed (+107200)
+## 49         Cdh11                                     unnamed (+96292)
+## 50         Cdh26                                     unnamed (+83468)
+##  [ reached &#39;max&#39; / getOption(&quot;max.print&quot;) -- omitted 286 rows ]</code></pre>
+</div>
+
+            
+        <hr>         <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+              </div> 
+            </div>
+          </div>
+
+   <hr>  <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div> 
+        </div>
+      </div>
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/js/docs.min.js"></script>
+<script src="/js/main.js"></script>
+
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    
+  </body>
+</html>
