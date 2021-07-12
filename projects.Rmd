@@ -15,7 +15,7 @@ Check out some of my coding projects below:
 
 Check out some of my research projects below:
 
-<i class="fas fa-dna"></i> &nbsp; [UCSC Genome Browser: Identifying Potential Genes Regulated by Sonic Hedgehog Signaling Involved in Limb Development](/project/project3/)
+<i class="fa fa-bar-chart" aria-hidden="true"></i> &nbsp; [UCSC Genome Browser: Identifying Potential Genes Regulated by Sonic Hedgehog Signaling Involved in Limb Development](/project/project3/)
 
 <!--
 <i class="fa fa-pie-chart"></i> 
