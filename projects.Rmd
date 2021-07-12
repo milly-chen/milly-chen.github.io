@@ -15,9 +15,9 @@ Check out some of my coding projects below:
 
 Check out some of my research projects below:
 
-<i class="fa fa-bar-chart" aria-hidden="true"></i> &nbsp; [UCSC Genome Browser: Identifying Potential Genes Regulated by Sonic Hedgehog Signaling Involved in Limb Development](/project/project3/)
+<i class="fa fa-tasks" aria-hidden="true"></i> &nbsp; [UCSC Genome Browser: Identifying Potential Genes Regulated by Sonic Hedgehog Signaling Involved in Limb Development](/project/project3/)
 
-<i class="fa fa-users" aria-hidden="true"></i> &nbsp; [Using DECIPHER Patient Genomic Information to Propose Causes of Genetic Disorders](/project/project4/)'
+<i class="fa fa-universal-access" aria-hidden="true"></i> &nbsp; [Using DECIPHER Patient Genomic Information to Propose Causes of Genetic Disorders](/project/project4/)'
 
 <i class="fa fa-times" aria-hidden="true"></i> &nbsp; [Analysis of the Epigenetic Causations of Fragile X Syndrome and Potential Methods of Treatment](/project/project5/)
 
