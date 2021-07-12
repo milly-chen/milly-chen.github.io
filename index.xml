@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Epigenetics of FMR1 on Fragile X Syndrome</title>
+      <link>/project/project5/</link>
+      <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/project/project5/</guid>
+      <description>Epigenetics is the study of heritable changes in phenotype without changing DNA nucleotide sequence (Gibney &amp;amp; Nolan, 2010). It has become a popular field of research where scientists try to better understand the impact of epigenetics and gene expression on human diseases. Epigenetic modifications can be found on both the DNA and histones. Histones are positively charged proteins that assist in chromatin folding, which can actively express or repress gene expression.</description>
+    </item>
+    
+    <item>
       <title>Proposed Gli Enhancer Target Gene *Smoc1* Involved In Limb Development By Hedgehog Signal Using GREAT.</title>
       <link>/project/project3/</link>
       <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
@@ -59,13 +68,13 @@ First ensure the “reticulate” package has been installed and now let’s try
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/projects/</guid>
-      <description>Check out some of my coding projects below:
+      <description>Check out some of my coding projects below:
  Wrangling &amp;amp; Exploratory Data Analysis
  Modeling, Inference, Prediction
 Check out some of my research projects below:
  UCSC Genome Browser: Identifying Potential Genes Regulated by Sonic Hedgehog Signaling Involved in Limb Development
- DECIPHER Patient Identification Study
-  --</description>
+ Using DECIPHER Patient Genomic Information to Propose Causes of Genetic Disorders’
+ Analysis of the Epigenetic Causations of Fragile X Syndrome and Potential Methods of Treatment</description>
     </item>
     
     <item>
