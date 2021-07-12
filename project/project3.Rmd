@@ -67,6 +67,8 @@ Figure 5 *This is a figure showing how BMP is a target gene of HH signaling and 
 
 To test my second hypothesis, I can use RNA-seq to see if the levels of Smoc1 expression change in a wild type cell line containing Gli3 and in a mutant cell line lacking Gli3. First I would dissect the limb buds from both cell lines and then perform RNA-seq to see Smoc1 expression levels. If my hypothesis was right in that *Smoc1* is indeed a positive regulator of HH signaling, then the wild type cell line will show increased Smoc1 expression and the mutant cell line will have decreased Smoc1 expression levels. 
 
+*This project was completed in Spring 2021 for Human Genetics (BIO325T) with help from Dr. Steven Vokes.*
+
 ## References
  
 Abouzeid, H., Boisset, G., Favez, T., Youssef, M., Marzouk, I., Shakankiry, N., Bayoumi, N., Descombes, P., Agosti, C., Munier, F. L., & Schorderet, D. F. (2011). Mutations in the sparc-related modular calcium-binding protein 1 gene, smoc1, cause waardenburg anophthalmia syndrome. The American Journal of Human Genetics, 88(1), 92–98. https://doi.org/10.1016/j.ajhg.2010.12.002

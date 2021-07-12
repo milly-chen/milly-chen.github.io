@@ -6,7 +6,16 @@
     <description>Recent content on Project 3</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 12 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Loss of copy number variant in RGS10 and GRK5 in human patient to potentially cause Horner Syndrome through increased neuronal inflammation</title>
+      <link>/project/project4/</link>
+      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/project/project4/</guid>
+      <description>SummaryHorner Syndrome (HS) is a subtle, non-lethal disorder that is caused by lesions such as tumors or inflammation to the oculosympathetic pathway (Martin, 2018). Symptoms of HS include droopy eyelids, constriction of the pupil, and displacement of the eye in the eye socket (Walton&amp;amp; Buono, 2003). There have been no genes identified that cause this disorder nor is the mode of inheritance well known. However, this paper seeks to identify the potential genetic causation of Horner Syndrome through analysis of DECIPHER patients.</description>
+    </item>
+    
     <item>
       <title>Proposed Gli Enhancer Target Gene *Smoc1* Involved In Limb Development By Hedgehog Signal Using GREAT.</title>
       <link>/project/project3/</link>
@@ -55,6 +64,7 @@ First ensure the “reticulate” package has been installed and now let’s try
  Modeling, Inference, Prediction
 Check out some of my research projects below:
  UCSC Genome Browser: Identifying Potential Genes Regulated by Sonic Hedgehog Signaling Involved in Limb Development
+ DECIPHER Patient Identification Study
   --</description>
     </item>
     
