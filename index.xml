@@ -63,6 +63,24 @@ First ensure the “reticulate” package has been installed and now let’s try
     </item>
     
     <item>
+      <title>CV</title>
+      <link>/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CV</title>
+      <link>/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/resume/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Projects</title>
       <link>/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -75,15 +93,6 @@ Check out some of my research projects below:
  UCSC Genome Browser: Identifying Potential Genes Regulated by Sonic Hedgehog Signaling Involved in Limb Development
  Using DECIPHER Patient Genomic Information to Propose Causes of Genetic Disorders’
  Analysis of the Epigenetic Causations of Fragile X Syndrome and Potential Methods of Treatment</description>
-    </item>
-    
-    <item>
-      <title>Resume</title>
-      <link>/resume/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/resume/</guid>
-      <description></description>
     </item>
     
   </channel>
